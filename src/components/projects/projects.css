@@ -1,0 +1,137 @@
+.projects_container {
+    width: 750px;
+}
+
+.projects_card {
+    background-color: var(--container-color);
+    border: 1px solid rgba(0 , 0, 0, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 1.5rem;
+    margin-bottom: var(--mb-0-75);
+}
+
+.projects_img {
+    width: 100%;
+    margin-bottom: var(--mb-1);
+}
+
+.projects_name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-3);
+}
+
+.projects_description {
+    font-size: var(--small-font-size);
+}
+
+.projects_button {
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    cursor: pointer;
+}
+
+.projects_button_icon{
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.projects_button:hover .projects_button_icon{
+    transform: translateX(0.25rem);
+}
+
+
+.projects_modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: var(--z-modal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    border-radius: 1.5rem;
+}
+
+.projects_modal-content {
+    width: 60%;
+    position: relative;
+    background-color: var(--container-color);
+    padding: 4.5rem 2.5rem 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.projects_modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.projects_modal-content video{
+    width: 100%;
+}
+
+/* Active Modal */
+.projects_active-modal{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Swiper Class*/
+.swiper-pagination-bullet {
+    background-color: var(--text-color) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--title-color) !important;
+}
+
+/*----------> BREAKPOINST <----------*/
+
+/* Large devices */
+@media screen and (max-width: 992px){
+    .projects_container{
+        width: initial;
+    }
+
+    .projects_card {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .projects_modal-content{
+        width: 70%;
+    }
+}
+
+/* Medium devices */
+@media screen and (max-width: 768px){
+    .projects_modal-content{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .projects_modal-content{
+        width: 85%;
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 350px){
+    .projects_modal-content{
+        width: 95%;
+        padding: 4.5rem 0.5rem 1.5rem;
+    }
+}
