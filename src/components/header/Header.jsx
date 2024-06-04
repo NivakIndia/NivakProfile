@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './header.css'
-import logo from '../../assets/Nivak.png'
 
 const Header = () => {
     /*----------> CHANGE BACKGROUND HEADER <----------*/
@@ -23,7 +22,7 @@ const Header = () => {
   return (
     <header className="header">
         <nav className="nav container">
-            <a href="/" className="nav_logo"><img src={logo} alt="Nivak" width='100px'/></a>
+            <a href="/" className="nav_logo"><img src='https://res.cloudinary.com/dzxh08cyi/image/upload/Portfolio/logo/Nivak_wwfjpc.png' alt="Nivak" width='100px'/></a>
 
             <div className={Toggle ? "nav_menu show-menu":"nav_menu"}>
                 <ul className="nav_list grid">
